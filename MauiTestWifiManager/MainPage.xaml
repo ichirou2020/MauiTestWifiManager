@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTestWifiManager.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Wi-Fi Managerテスト" FontSize="30" />
+            <!--  権限確認  -->
+            <Button x:Name="CheckPermissionButtono" Text="権限確認" Clicked="CheckPermissionButtono_Clicked" />
+            <Label x:Name="ResultPermissionLabel" Text="" />
+            <!-- WIFI接続 -->
+            <Button x:Name="ConnectAccessPointButtn" Text="WIFI接続" Clicked="ConnectAccessPointButtn_Clicked" />
+            <Label x:Name="ResultAccessPoitLabel" Text="" />
+            <!-- TCP接続 -->
+            <Button x:Name="ConnectTcpButtn" Text="TCP接続" Clicked="ConnectTcpButtn_Clicked" IsEnabled="True" />
+            <Label x:Name="ResultTcpLabel" Text="" />
+            <!-- TCP送信 -->
+            <Button x:Name="SendButtn" Text="送信" Clicked="SendButtn_Clicked" IsEnabled="False"/>
+            <Editor x:Name="SendTextEditor" Text="おはよう" />
+            <Label x:Name="ResultTextLabel" Text="" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
